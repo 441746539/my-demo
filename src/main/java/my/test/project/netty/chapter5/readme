@@ -1,0 +1,1 @@
+messagepack的例子还用到了LengthFieldBasedFrame作为解决粘包拆包的工具

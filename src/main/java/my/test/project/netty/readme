@@ -1,0 +1,5 @@
+
+
+1.netty中的Bytebuf内存泄漏
+https://blog.csdn.net/andyzhu_2005/article/details/88774367
+看了下源码Unpooled.copiedBuffer使用的是UnpooledHeapByteBuf。

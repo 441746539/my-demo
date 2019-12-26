@@ -1,0 +1,11 @@
+使用LineBasedFrameDecoder解决粘包问题
+
+1.服务端
+   GoodTCPServer.ChildChannelHandler 注册 LineBasedFrameDecoder和StringDecoder
+   GoodTCPServerHandler 28行注释自己处理分隔符的代码
+
+2.客户端
+  GoodTCPServer 30行也注册 LineBasedFrameDecoder和StringDecoder
+
+
+  *坑！ 注册了StringDecoder后， 客户端和服务端Handler的channelRead返回的msg直接就是STRING了，不用再转化成ByteBuf！！

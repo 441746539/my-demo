@@ -1,0 +1,7 @@
+模拟tcp粘包拆包产生的故障
+
+数据string多一个回车符分隔符：
+BadTCPServerHandler 39行加回车符分隔符；28行处理回车符分隔符
+BadTCPClientHandler 22行加回车符分隔符；channelActive循环发送
+
+执行结果：服务器和客户端都发生了粘包
